@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
 module.exports = {
-  content: [],
+  content: [
+		"./src/components/Navbar/index.jsx"
+	],
   theme: {
     colors: {
       transparent: 'transparent',
