@@ -1,0 +1,61 @@
+.fundo-carrosel{
+  background-color: #dcc7aa;
+  width: 100%;
+  padding-top: 1rem;
+  margin:0;
+
+}
+.container-slide{
+
+  width: 70%;
+  height: 60%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+@media (max-width:768px) {
+  .container-slide{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+  }
+
+  .slide{
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    margin:0;
+  }
+}
+
+/* Estilos para os slides */
+.slide {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0; /* Espaçamento entre os slides */
+  width: 100%; /* Largura fixa para os slides */
+  height:100%; /* Altura fixa para os slides */
+}
+
+.slide img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do slide */
+  height: 100%; /* Garante que a imagem ocupe toda a altura do slide */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Borda arredondada */
+}
+
+.thumbs {
+  display: none;
+}
+
+.carousel-status {
+  display: none;
+}
+
+.fundo {
+  background-color: #6b7a87;
+  margin: 0;
+  padding: 0;
+}

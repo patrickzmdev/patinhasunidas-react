@@ -1,16 +1,17 @@
 import React from "react";
 import Logo from "../../assets/logofinal.png";
+import "./styles.css";
 
 function Navigation() {
   return (
     <>
-      <header className="w-full p-4 bg-white text-dark">
+      <header className="w-full p-4 bg-custom-color text-dark">
         <div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">
           <ul className="items-stretch hidden space-x-3 md:flex">
             <li className="flex">
               <a rel="noopener noreferrer"
                 href="www.google.com"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="170"
               >
@@ -21,7 +22,7 @@ function Navigation() {
               <a
                 rel="noopener noreferrer"
                 href="www"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="171"
               >
@@ -32,7 +33,7 @@ function Navigation() {
               <a
                 rel="noopener noreferrer"
                 href="www"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="172"
               >
@@ -56,7 +57,7 @@ function Navigation() {
               <a
                 rel="noopener noreferrer"
                 href="www"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="174"
               >
@@ -66,8 +67,9 @@ function Navigation() {
             <li className="flex">
               <a
                 rel="noopener noreferrer"
-                href="www"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+                href="https://patinhasunidassc.petlove.com.br/"
+                target="_blank"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="175"
               >
@@ -78,7 +80,7 @@ function Navigation() {
               <a
                 rel="noopener noreferrer"
                 href="www"
-                className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+                className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
                 _msthash="176"
               >
