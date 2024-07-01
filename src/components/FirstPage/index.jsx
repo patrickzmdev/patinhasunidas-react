@@ -5,6 +5,7 @@ import foto1 from "../../assets/fotomenu1.png";
 import foto2 from "../../assets/fotomenu2.jpg";
 import foto3 from "../../assets/fotomenu4.png";
 import fotoMenu from "../../assets/imgtextcontainer.jpg"
+import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg"
 import React, { useState, useEffect } from 'react';
 
 function HomePage() {
@@ -81,13 +82,16 @@ function HomePage() {
 				<a rel="noopener noreferrer" href="." class="inline-block text-3xl from-indigo-950 sm:text-3xl" _msttexthash="1638520" _msthash="415">A IMPORTÂNCIA DE ADOTAR UM ANIMAL ABANDONADO</a>
 
 			</div>
-			<div class="dark:text-gray-800 text-1xl">
-				<p _msttexthash="1006226" _msthash="417" from-neutral-800>De acordo com o Instituto Brasileiro de Geografia e Estatística (IBGE), 44,13% dos lares brasileiros possui ao menos um cão em casa. Isto significa dizer que a população de cachorros nas casas do Brasil chega a 52,2 milhões. Contudo, ainda existem mais de 20 milhões de cães abandonados pelas ruas, nas cidades brasileiras, como mostra a Organização Mundial de Saúde (OMS).</p>
+      <div className="container-texto">
+      <img src={fotoContainer} alt="foto-container" className="img-container"/>
+			<div class="text-zinc-950 text-1xl font-serif m-2">
+				<p _msttexthash="1006226" _msthash="417" from-neutral-800>&nbsp;&nbsp;&nbsp;&nbsp;De acordo com o Instituto Brasileiro de Geografia e Estatística (IBGE), 44,13% dos lares brasileiros possui ao menos um cão em casa. Isto significa dizer que a população de cachorros nas casas do Brasil chega a 52,2 milhões. Contudo, ainda existem mais de 20 milhões de cães abandonados pelas ruas, nas cidades brasileiras, como mostra a Organização Mundial de Saúde (OMS).</p>
         </div>
       <br/>
-      <div class="dark:text-gray-800 text-1xl">
-        <p _msttexthash="1006226" _msthash="417" from-neutral-800>Estes animais, abandonados nas ruas, tornam-se alvos de maus-tratos constantes. Muitos acabam ficando doentes pela falta de comida ou morrem devido a atropelamentos. No entanto, a sociedade pode mudar esta realidade e passar a ver a adoção como uma alternativa viável. Para quem ainda tem dúvida sobre este assunto, vamos destacar algumas razões que podem estimular este ato de amor, que é a adoção de animais carentes.</p>
+      <div class="dark:text-gray-800 text-1xl font-serif m-2">
+        <p _msttexthash="1006226" _msthash="417" from-neutral-800>&nbsp;&nbsp;&nbsp;&nbsp;Estes animais, abandonados nas ruas, tornam-se alvos de maus-tratos constantes. Muitos acabam ficando doentes pela falta de comida ou morrem devido a atropelamentos. No entanto, a sociedade pode mudar esta realidade e passar a ver a adoção como uma alternativa viável. Para quem ainda tem dúvida sobre este assunto, vamos destacar algumas razões que podem estimular este ato de amor, que é a adoção de animais carentes.</p>
 			</div>
+      </div>
 		</div>
 	</div>
   </div>

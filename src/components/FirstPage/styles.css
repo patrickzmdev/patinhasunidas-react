@@ -1,5 +1,5 @@
 .fundo-carrosel{
-  background-color: #dcc7aa;
+  background: linear-gradient(to bottom, #f7a8ac, #f96d71);
   width: 100%;
   padding-top: 1rem;
   margin:0;
@@ -31,7 +31,7 @@
 /* Estilos para os slides */
 .slide {
   background-color: #f1f1f1;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 8px;
   overflow: hidden;
   margin: 0; /* Espaçamento entre os slides */
@@ -55,7 +55,25 @@
 }
 
 .fundo {
-  background-color: #6b7a87;
+  background: linear-gradient(to bottom,#f96d71, #d7a8ac );
   margin: 0;
   padding: 0;
+}
+
+.container-texto{
+  z-index: 1;
+  height: 30rem;
+  position: relative;
+}
+
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste para cobrir o container */
+  z-index: -1; /* Coloca a imagem atrás do texto */
+  opacity: 25%;
+  border-radius: 10px;
 }
