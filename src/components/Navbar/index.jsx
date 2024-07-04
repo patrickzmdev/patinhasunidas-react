@@ -15,6 +15,10 @@ function Navigation() {
     setVisible(!visible);
   };
 
+  const handleMenuItemClick = () => {
+    setVisible(false);
+  };
+
   return (
     <>
       <header className="w-full p-4 bg-custom-color text-dark">
@@ -46,28 +50,19 @@ function Navigation() {
 
             </li>
           </ul>
-          <a
-            rel="noopener noreferrer"
-            href="www"
-            aria-label="Voltar à página inicial"
-            className="flex items-center p-2"
-            _mstaria-label="254683"
-            _msthash="173"
-          >
+          <Link to="/">
             <img src={Logo} alt="Logo" className="h-20 w-auto"/>
+            </Link>
 
-          </a>
           <ul className="items-stretch hidden space-x-3 md:flex">
             <li className="flex">
-              <a
-                rel="noopener noreferrer"
-                href="www"
+             <Link to="/ajudar"
                 className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
-                _msthash="174"
-              >
+                _msthash="174">
+
                 Como Ajudar
-              </a>
+                </Link>
             </li>
             <li className="flex">
               <a
@@ -116,19 +111,19 @@ function Navigation() {
                     icon={<CloseOutlined />}
                 />
                <Menu mode="vertical" className="bg-custom-color">
-                            <Menu.Item key="1">
+                            <Menu.Item key="1" onClick={handleMenuItemClick}>
                                 <Link to="/">Pagina Inicial</Link>
                             </Menu.Item>
-                            <Menu.Item key="2">
-                                <Link to="/history">Nossa História</Link>
+                            <Menu.Item key="2" onClick={handleMenuItemClick}>
+                                <Link to="/history" >Nossa História</Link>
                             </Menu.Item>
-                            <Menu.Item key="3">
+                            <Menu.Item key="3" onClick={handleMenuItemClick}>
                                 <Link to="/events">Eventos</Link>
                             </Menu.Item>
-                            <Menu.Item key="4">
-                                <Link to="/help">Como Ajudar</Link>
+                            <Menu.Item key="4" onClick={handleMenuItemClick}>
+                                <Link to="/ajudar">Como Ajudar</Link>
                             </Menu.Item>
-                            <Menu.Item key="5">
+                            <Menu.Item key="5" onClick={handleMenuItemClick}>
                                 <a  rel="noopener noreferrer"
                                     href="https://patinhasunidassc.petlove.com.br/"
                                     target="_blank"
@@ -136,7 +131,7 @@ function Navigation() {
                                     _msthash="175"
                                     >Nossa Lojinha</a>
                             </Menu.Item>
-                            <Menu.Item key="6">
+                            <Menu.Item key="6" onClick={handleMenuItemClick}>
                                 <Link to="/pets">Pets</Link>
                             </Menu.Item>
                         </Menu>

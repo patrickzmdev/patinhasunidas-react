@@ -15,7 +15,7 @@ function Historia() {
             <li
               rel="noopener noreferrer"
 
-              className="inline-block text-3xl from-indigo-950 sm:text-3xl"
+              className="inline-block text-2xl font-semibold sm:text-3xl m-9"
             >
               NOSSA HISTÓRIA
             </li>

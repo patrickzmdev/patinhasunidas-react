@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Events from './pages/Events';
 import Historia from './pages/Historia';
 import Pets from './pages/Pets';
+import Ajudar from './pages/Ajudar';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/events' element={<Events />} />
         <Route path='/history' element={<Historia />} />
         <Route path='/pets' element={<Pets />} />
+        <Route path='/ajudar' element={<Ajudar />} />
       </Routes>
       <Footer />
       </div>
