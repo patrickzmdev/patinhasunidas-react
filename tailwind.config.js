@@ -5,7 +5,10 @@ module.exports = {
 		"./src/components/Navbar/index.jsx",
 		"./src/pages/FirstPage/index.jsx",
 		"./src/components/Footer/index.jsx",
-		"./src/pages/Events/index.jsx"
+		"./src/pages/Events/index.jsx",
+		"./src/pages/Pets/index.jsx",
+		"./src/pages/Pets/petcard.jsx",
+		"./src/pages/Pets/petlist.jsx"
 	],
   theme: {
     colors: {

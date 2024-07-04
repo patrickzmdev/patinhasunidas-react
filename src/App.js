@@ -6,6 +6,7 @@ import HomePage from './pages/FirstPage';
 import Footer from './components/Footer';
 import Events from './pages/Events';
 import Historia from './pages/Historia';
+import Pets from './pages/Pets';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/events' element={<Events />} />
         <Route path='/history' element={<Historia />} />
+        <Route path='/pets' element={<Pets />} />
       </Routes>
       <Footer />
       </div>

@@ -82,16 +82,15 @@ function Navigation() {
               </a>
             </li>
             <li className="flex">
-              <a
-                rel="noopener noreferrer"
-                href="www"
+            <Link to="/pets"
                 className="flex items-center px-4 -mb-1 border-b-2 border-black"
                 _msttexthash="44616"
-                _msthash="176"
-              >
-                Pets
-              </a>
+                _msthash="172">
+                Pets</Link>
+
             </li>
+
+
           </ul>
           <button title="Button" onClick={handleMenuClick} type="button" className="p-2 md:hidden rounded">
             <svg

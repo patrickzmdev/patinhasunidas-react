@@ -1,3 +1,7 @@
 .bg-custom-color{
   background: linear-gradient(to bottom,#f7a8ac, #f8c4c7);
 }
+
+.bg-custom-color2{
+  background: linear-gradient(to bottom, #f8c4c7, #f96d71) ;
+}
