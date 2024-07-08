@@ -4,7 +4,7 @@ const PetCard = ({ image, name, idade, description }) => {
   const handleAdoptClick = () => {
     const subject = encodeURIComponent(`Quero Adotar ${name}`);
     const body = encodeURIComponent(`Olá, estou interessado em adotar o pet ${name}. Por favor, envie mais informações.`);
-    const mailtoLink = `mailto:seuemail@exemplo.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:patinhasunidassc@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
   };
   return (
