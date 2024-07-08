@@ -2,39 +2,28 @@ import caotriste from "../../assets/cao-abandonado.jpg";
 import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
 import qrcode from "../../assets/qr-code.jpg";
 import "../Events/styles.css";
-import { useState, useEffect } from "react";
+import {useRef, useState} from "react";
 
 
 function Ajudar () {
   const [isVisible, setIsVisible] = useState(false);
+  const textoParaCopiarRef = useRef(null);
 
   const handleButtonClick = () => {
     setIsVisible(!isVisible);
   };
 
-  useEffect(() => {
-    const copyButton = document.getElementById('copyButton');
-    if (copyButton) {
-      copyButton.addEventListener('click', function () {
-        const textoParaCopiar = document.getElementById('textoParaCopiar');
-        textoParaCopiar.select();
-        document.execCommand('copy');
-        alert('Texto copiado: ' + textoParaCopiar.value);
-      });
-    }
-
-    // Cleanup event listener on component unmount
-    return () => {
-      if (copyButton) {
-        copyButton.removeEventListener('click', function () {
-          const textoParaCopiar = document.getElementById('textoParaCopiar');
-          textoParaCopiar.select();
-          document.execCommand('copy');
-          alert('Texto copiado: ' + textoParaCopiar.value);
-        });
+    const handleCopy = async () => {
+      const textoParaCopiar = document.getElementById('textoParaCopiar');
+      try {
+        await navigator.clipboard.writeText(textoParaCopiar.value);
+        alert('Linha copiada com sucesso, acesse o App do seu Banco para concluir o pix.');
+      } catch (err) {
+        console.error('Erro ao copiar texto: ', err);
       }
     };
-  }, [isVisible]);
+
+
 
 
 
@@ -61,11 +50,11 @@ function Ajudar () {
               >
                 Linha Digitavel
                 </li>
-                <textarea className="w-full h-32 p-2 border rounded-lg" rows="3" cols="50" id="textoParaCopiar">
+                <textarea ref={textoParaCopiarRef} className="w-full h-32 p-2 border rounded-lg" rows="3" cols="50" id="textoParaCopiar">
                 00020101021126360014br.gov.bcb.pix0114476477850001525204000053039865802BR5925INSTITUTO PATINHAS UNIDAS6008BRASILIA62070503***63046951
                 </textarea>
 
-                <button id="copyButton" className="w-full px-8 py-3 font-semibold bg-custom-color rounded-full dark:text-gray-100">Copiar Linha Digitavel</button>
+                <button id="copyButton" className="w-full px-8 py-3 font-semibold bg-custom-color rounded-full dark:text-gray-100" onClick={handleCopy}>Copiar Linha Digitavel</button>
             </div>
             )}
         </div>
@@ -78,7 +67,7 @@ function Ajudar () {
               className="w-full h-auto sm:h-64 object-cover md:h-72 xl:h-auto border-2 border-cyan-950"
             />
 
-          <div className="p-8 pb-1 m-8 mx-auto bg-white  -mt-36 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
+          <div className="p-8 pb-1 m-8 mx-auto bg-white  mt-10 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
             <div className="space-y-2 ">
               <li
                 rel="noopener noreferrer"
@@ -94,7 +83,7 @@ function Ajudar () {
                 alt="foto-container"
                 className="img-container object-cover "
               />
-              <div className="text-zinc-950 text-xl font-sans m-1">
+              <div className="text-zinc-950 text-1xl font-serif m-2">
               <p _msttexthash="1006226" _msthash="209">Para quem ama pets, mas não pode ter um em casa devido à falta de espaço e tempo, nosso grupo disponibiliza a opção de apadrinhamento.
               </p>
                 <br/>

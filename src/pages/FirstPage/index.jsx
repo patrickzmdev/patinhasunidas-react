@@ -78,8 +78,8 @@ function HomePage() {
     <div class="p-1 mx-auto sm:p-10 md:p-16 dark:bg-cyan-950 dark:text-gray-800">
 	  <div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
 		<img src={fotoMenu} alt="foto-menu" class="w-full h-auto sm:h-64 object-cover md:h-8 xl:h-auto border-2 border-cyan-950 dark:bg-cyan-950"/>
-		<div class="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
-			<div class="space-y-2 mt-20" >
+		<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 bg-white lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
+			<div class="space-y-2 mt-20 bg-white" >
 				<a rel="noopener noreferrer" href="." class="inline-block text-3xl from-indigo-950 sm:text-3xl" _msttexthash="1638520" _msthash="415">A IMPORTÂNCIA DE ADOTAR UM ANIMAL ABANDONADO</a>
 
 			</div>

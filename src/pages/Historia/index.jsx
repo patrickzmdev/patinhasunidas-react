@@ -12,7 +12,7 @@ function Historia() {
           alt="foto-menu"
           className="w-full h-auto sm:h-64 object-cover md:h-7 xl:h-auto border-2 border-cyan-950"
         />
-        <div className=" pb-1 pt-4 m-6 mx-auto -mt-28 bg-white space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
+        <div className=" pb-1 pt-4 m-6 mx-auto mt-10 bg-white space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
           <div className="space-y-2 mt-20">
             <li
               rel="noopener noreferrer"
