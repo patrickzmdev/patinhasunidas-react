@@ -38,7 +38,7 @@ function Navigation() {
                 _msttexthash="44616"
                 _msthash="171">
 
-                Nossa História
+                O Instituto
               </Link>
             </li>
             <li className="flex">
@@ -115,7 +115,7 @@ function Navigation() {
                                 <Link to="/">Pagina Inicial</Link>
                             </Menu.Item>
                             <Menu.Item key="2" onClick={handleMenuItemClick}>
-                                <Link to="/history" >Nossa História</Link>
+                                <Link to="/history" >O Instituto</Link>
                             </Menu.Item>
                             <Menu.Item key="3" onClick={handleMenuItemClick}>
                                 <Link to="/events">Eventos</Link>

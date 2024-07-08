@@ -1,16 +1,18 @@
 import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
 import fotoLogo from "../../assets/logoNavbar.png";
+import "../Events/styles.css";
+
 
 function Historia() {
   return (
-    <div className="p-1 mx-auto sm:p-10 md:p-16">
+    <div className="p-1 mx-auto bg-custom-color sm:p-10 md:p-16">
       <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
         <img
           src={fotoLogo}
           alt="foto-menu"
           className="w-full h-auto sm:h-64 object-cover md:h-7 xl:h-auto border-2 border-cyan-950"
         />
-        <div className="p-1 pb-1 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
+        <div className=" pb-1 pt-4 m-6 mx-auto -mt-28 bg-white space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
           <div className="space-y-2 mt-20">
             <li
               rel="noopener noreferrer"
@@ -20,13 +22,13 @@ function Historia() {
               NOSSA HISTÓRIA
             </li>
           </div>
-          <div className="container-texto overflow-y-auto max-h-full md:max-h-full">
+          <div className="container-texto overflow-y-auto bg-white max-h-full md:max-h-full">
             <img
               src={fotoContainer}
               alt="foto-container"
               className="img-container"
             />
-            <div className="text-zinc-950 text-xl font-sans m-1">
+            <div className="text-zinc-950 text-1xl font-serif m-2">
               <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;Ao longo dos 5 anos do Instituto Patinhas
                 Unidas SC, já foi possível resgatar e acolher mais de duzentos de
@@ -54,8 +56,12 @@ function Historia() {
               </p>
             </div>
           </div>
+
         </div>
+
       </div>
+
+
     </div>
   );
 }

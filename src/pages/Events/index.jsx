@@ -25,7 +25,7 @@ function Events() {
 						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
 							</p>
 					</div>
-					<div class="text-zinc-950 text-xl font-sans m-1">
+					<div class="text-zinc-950 text-1xl font-serif m-2">
 							<p _msttexthash="1006226" _msthash="209">O primeiro Audotei do Instituto Patinhas Unidas SC, realizado em fevereiro de 2024, foi um momento de grande celebração para a comunidade canina. Contamos com a presença de mais de 40 cães e seus tutores no local, com ajuda de voluntários também foi possível realizar uma feirinha de adoção, onde os cães resgatados procuravam por novos lares.</p>
 							<br/>
 							<p _msttexthash="1006226" _msthash="209">Durante o evento, foram distribuídos petiscos, brindes e picolés pet para que os cães e, ao mesmo tempo, arrecadamos recursos para a causa animal. Além disso, foi realizada uma arrecadação de rações para os cães desamparados, bem como um bazar solidário que ofereceu opções para os participantes.</p>
