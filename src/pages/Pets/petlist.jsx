@@ -3,6 +3,7 @@ import React from 'react';
 import PetCard from './petcard';
 
 const PetsList = ({ pets }) => {
+    console.log('PetsList renderizado com pets: ', pets)
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {pets.map((pet) => (

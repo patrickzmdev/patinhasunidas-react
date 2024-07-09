@@ -22,16 +22,16 @@ const PetCard = ({ image, name, idade, description }) => {
     <div className="flex justify-center items-center h-auto ">
 
 
-    <div className="max-w-xs  border-4  border-neutral-800  rounded-md mb-2 shadow-md bg-custom-color2  dark:text-gray-900 ">
+    <div className="max-w-xs  border-4  border-white  rounded-md mb-2 shadow-md bg-custom-color2  dark:text-gray-900 ">
       <img src={image} alt={name} className="object-cover cursor-pointer object-center w-full rounded-md h-72 dark:bg-gray-500" onClick={handleImageClick} />
       <div className="m-2 flex flex-col justify-center items-center">
-          <span className="block text-xs font-medium tracking-widest uppercase">Nome do Pet:</span>
-          <h2 className="text-xl p-1 font-semibold tracking-wide">{name}</h2>
+          <span className="block text-xs text-white  font-medium tracking-widest uppercase">Nome do Pet:</span>
+          <h2 className="text-xl p-1 text-white font-semibold tracking-wide">{name}</h2>
 
-          <p className="dark:text-gray-800 p-1">{idade}</p>
-          <p className="dark:text-gray-800 p-1">{description}</p>
+          <p className="text-white p-1">{idade}</p>
+          <p className="text-white p-1">{description}</p>
 
-    <button type="button" className="px-6 py-2 p-10 font-semibold rounded-full bg-custom-color dark:bg-gray-800 " onClick={handleAdoptClick}>Adotar</button>
+    <button type="button" className="px-6 py-2 p-10 font-semibold text-white rounded-full bg-custom-color  " onClick={handleAdoptClick}>Adotar</button>
     </div>
     </div>
 

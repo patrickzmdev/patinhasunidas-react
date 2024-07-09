@@ -1,7 +1,7 @@
 
 
 .fundo-carrosel{
-  background: linear-gradient(to bottom, #f7a8ac, #f96d71);
+  background: linear-gradient(to bottom, #EF3E43, #FD6468);
   width: 100%;
   padding-top: 1rem;
   margin:0;
@@ -57,7 +57,7 @@
 }
 
 .fundo {
-  background: linear-gradient(to bottom,#f96d71, #f8c4c7 );
+  background: linear-gradient(to bottom,#FD6468, #A9070C );
   margin: 0;
   padding: 0;
 }

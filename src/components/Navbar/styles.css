@@ -1,5 +1,10 @@
-.bg-custom-color{
-  background: linear-gradient(to bottom, white, #f7a8ac);
+
+.bg-custom-navbar{
+  background: linear-gradient(to bottom,#EF3E43, #A9070C);
+}
+
+.bg-custom-navbar2{
+  background: #A9070C ;
 }
 
 .fixed {
@@ -23,11 +28,11 @@
 }
 
 .bg-white {
-  background-color: white;
+  background-color: #A9070C;
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(245, 1, 1, 0.767);
 }
 
 .flex {

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logofinal.png";
+import Logo from "../../assets/logoNavbar.png";
 import "./styles.css";
 import { Link } from 'react-router-dom';
 import { useState } from "react";
@@ -21,12 +21,12 @@ function Navigation() {
 
   return (
     <>
-      <header className="w-full p-4 bg-custom-color text-dark">
-        <div className="container flex justify-between h-16 mx-auto md:justify-center md:space-x-8">
+      <header className="w-full p-4 bg-custom-navbar">
+        <div className="container flex justify-between bg-custom-navbar2 rounded-full h-16 mx-auto md:justify-center md:space-x-8">
           <ul className="items-stretch hidden space-x-3 md:flex">
             <li className="flex">
               <Link to="/"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="170">
                   Página Inicial</Link>
@@ -34,7 +34,7 @@ function Navigation() {
             </li>
             <li className="flex">
               <Link to= "/history"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="171">
 
@@ -43,7 +43,7 @@ function Navigation() {
             </li>
             <li className="flex">
               <Link to="/events"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="172">
                 Eventos</Link>
@@ -57,7 +57,7 @@ function Navigation() {
           <ul className="items-stretch hidden space-x-3 md:flex">
             <li className="flex">
              <Link to="/ajudar"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="174">
 
@@ -69,7 +69,7 @@ function Navigation() {
                 rel="noopener noreferrer"
                 href="https://patinhasunidassc.petlove.com.br/"
                 target="_blank"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="175"
               >
@@ -78,7 +78,7 @@ function Navigation() {
             </li>
             <li className="flex">
             <Link to="/pets"
-                className="flex items-center px-4 -mb-1 border-b-2 border-black"
+                className="flex items-center text-white font-playwrite px-4 -mb-1 border-b-2 border-white"
                 _msttexthash="44616"
                 _msthash="172">
                 Pets</Link>
@@ -87,7 +87,7 @@ function Navigation() {
 
 
           </ul>
-          <button title="Button" onClick={handleMenuClick} type="button" className="p-2 md:hidden rounded">
+          <button title="Button" onClick={handleMenuClick} type="button" className="p-2 md:hidden text-white rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -104,24 +104,24 @@ function Navigation() {
             </svg>
           </button>
 
-        <div className={`fixed top-0 right-0 z-40 p-5 bg-custom-color opacity-90 shadow-lg transition-transform transform ${visible ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className={`fixed top-0 right-0 z-40 p-5 bg-custom-navbar2 opacity-90 shadow-lg transition-transform transform ${visible ? 'translate-x-0' : 'translate-x-full'}`}>
                 <Button
                     onClick={handleMenuClick}
                     className="absolute top-0 right-0"
                     icon={<CloseOutlined />}
                 />
-               <Menu mode="vertical" className="bg-custom-color">
+               <Menu mode="vertical" className="bg-white border-4 rounded-md">
                             <Menu.Item key="1" onClick={handleMenuItemClick}>
-                                <Link to="/">Pagina Inicial</Link>
+                                <Link to="/" ><li className="font-playwrite">Pagina Inicial</li></Link>
                             </Menu.Item>
                             <Menu.Item key="2" onClick={handleMenuItemClick}>
-                                <Link to="/history" >O Instituto</Link>
+                                <Link to="/history" ><li className="font-playwrite">O Instituto</li></Link>
                             </Menu.Item>
                             <Menu.Item key="3" onClick={handleMenuItemClick}>
-                                <Link to="/events">Eventos</Link>
+                                <Link to="/events"><li className="font-playwrite">Eventos</li></Link>
                             </Menu.Item>
                             <Menu.Item key="4" onClick={handleMenuItemClick}>
-                                <Link to="/ajudar">Como Ajudar</Link>
+                                <Link to="/ajudar"><li className="font-playwrite">Como Ajudar</li></Link>
                             </Menu.Item>
                             <Menu.Item key="5" onClick={handleMenuItemClick}>
                                 <a  rel="noopener noreferrer"
@@ -129,10 +129,10 @@ function Navigation() {
                                     target="_blank"
                                     _msttexthash="44616"
                                     _msthash="175"
-                                    >Nossa Lojinha</a>
+                                    ><li className="font-playwrite">Nossa Lojinha</li></a>
                             </Menu.Item>
                             <Menu.Item key="6" onClick={handleMenuItemClick}>
-                                <Link to="/pets">Pets</Link>
+                                <Link to="/pets"><li className="font-playwrite">Pets</li></Link>
                             </Menu.Item>
                         </Menu>
         </div>

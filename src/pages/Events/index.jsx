@@ -20,7 +20,7 @@ function Events() {
               className="img-container h-full w-full"
             />
 					<div class="space-y-2">
-						<a rel="noopener noreferrer" href="." class="inline-block text-2xl font-semibold sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Primeiro Evento Audotei</a>
+						<li rel="noopener noreferrer"  class="inline-block text-2xl font-playwrite sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Primeiro Evento Audotei</li>
 							<p class="text-xs dark:text-gray-600" _msttexthash="285766" _msthash="208">por
 						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
 							</p>
@@ -41,7 +41,7 @@ function Events() {
 		</div>
 	 </div>
 
-<div class="py-6 bg-custom-color">
+<div class="py-6 bg-custom-color2">
 	<div class="container flex flex-col justify-center p-4 mx-auto">
 		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
 			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src={fotoEvento2} alt="image1"/>

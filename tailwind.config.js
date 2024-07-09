@@ -40,7 +40,11 @@ module.exports = {
 			neutral: colors.blueGray,
 			stone: colors.stone,
     },
-    extend: {},
+    extend: {
+			fontFamily: {
+				'playwrite': ['Playwrite BE VLG', 'cursive'],
+			},
+		},
   },
   plugins: [],
 }
