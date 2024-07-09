@@ -25,17 +25,17 @@ import toquinho from "../../assets/toquinho,macho 1 ano castrado.jpg";
 import urso from "../../assets/Urso, porte G, castrado, vacinado, adulto 6 anos.jpeg";
 import vovo from "../../assets/Vovo, castrado, vacinado, porte G, 12 anos.jpeg";
 
-const vacinada = "vacinada e castrada";
-const vacinado = "vacinado e castrado";
+const vacinada = "Vacinada e Castrada";
+const vacinado = "Vacinado e Castrado";
 
 
 
 const animais = [
   { id:1, name:"Amora", image: amora, idade:"13 anos", description:vacinada },
-  { id:2, name:"Angel", image: angel, idade:"", description:"adulta e castrada" },
+  { id:2, name:"Angel", image: angel, idade:"", description:"Adulta e Castrada" },
   { id:3, name:"Chow", image: chow, idade:"7 anos", description:vacinado },
   { id:4, name:"Estefan", image: estefan, idade:"14 anos", description:vacinado },
-  { id:5, name:"Guga", image: guga, idade:"8 anos", description:"porte g, vacinado e castrado" },
+  { id:5, name:"Guga", image: guga, idade:"8 anos", description:"Porte G, Vacinado e Castrado" },
   { id:6, name:"Guinho", image: guinho, idade:"13 anos", description:vacinado },
   { id:7, name:"Guria", image: guria, idade:"12 anos", description:"Resgatada do Rio Grande do Sul" },
   { id:8, name:"Homenzinho", image: homenzinho, idade:"4 anos", description:vacinado },
@@ -46,18 +46,21 @@ const animais = [
   { id:13, name:"Lua", image: lua, idade:"4 anos", description:vacinada },
   { id:14, name:"Luna", image: luna, idade:"1 ano", description:vacinada },
   { id:15, name:"Maezinha", image: maezinha, idade:"4 anos", description:vacinada},
-  { id:16, name:"Neymara", image: neymara, idade:"4 anos", description:"porte m, vacinada e castrada" },
-  { id:17, name:"Noze", image: noze, idade:"6 anos", description:"porte g" },
-  { id:18, name:"Pandora", image: pandora, idade:"", description:"porte m, vacinada e castrada" },
+  { id:16, name:"Neymara", image: neymara, idade:"4 anos", description:"Porte M, Vacinada e Castrada" },
+  { id:17, name:"Noze", image: noze, idade:"6 anos", description:"Porte G" },
+  { id:18, name:"Pandora", image: pandora, idade:"", description:"Porte M, Vacinada e Castrada" },
   { id:19, name:"Pescoço", image: pescoco, idade:"10 anos", description:vacinado },
-  { id:20, name:"Preto", image: preto, idade:"", description:"porte g, vacinado e castrado" },
+  { id:20, name:"Preto", image: preto, idade:"", description:"Porte G, Vacinado e Castrado" },
   { id:21, name:"Shakira", image: shakira, idade:"10 anos", description:vacinada},
   { id:22, name:"Thor", image: thor, idade:"10 anos", description:vacinado },
-  { id:23, name:"Toquinho", image: toquinho, idade:"1 ano", description:"castrado" },
+  { id:23, name:"Toquinho", image: toquinho, idade:"1 ano", description:"Castrado" },
   { id:24, name:"Urso", image: urso, idade:"6 anos", description:vacinado },
-  { id:25, name:"Vovô", image: vovo, idade:"12 anos", description:"porte g, vacinado e castrado" },
+  { id:25, name:"Vovô", image: vovo, idade:"12 anos", description:"Porte G, Vacinado e Castrado" },
 ];
 function Pets() {
+
+
+    console.log('Pets renderizado');
 
   return (
     <>

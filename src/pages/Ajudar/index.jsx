@@ -50,7 +50,7 @@ function Ajudar () {
               >
                 Linha Digitavel
                 </li>
-                <textarea ref={textoParaCopiarRef} className="w-full h-32 p-2 border rounded-lg" rows="3" cols="50" id="textoParaCopiar">
+                <textarea  ref={textoParaCopiarRef} className="w-full h-32 p-2 border rounded-lg" rows="3" cols="50" id="textoParaCopiar">
                 00020101021126360014br.gov.bcb.pix0114476477850001525204000053039865802BR5925INSTITUTO PATINHAS UNIDAS6008BRASILIA62070503***63046951
                 </textarea>
 
