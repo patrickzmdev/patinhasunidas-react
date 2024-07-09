@@ -9,7 +9,7 @@ import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
 function Events() {
   return(
     <>
-    <div class="p-5 mx-auto sm:p-10 md:p-16 bg-custom-color dark:text-gray-800">
+    <div class="p-5 mx-auto sm:p-10 md:p-16 bg-custom-color ">
 			<div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
 			<img src={fotoEvento} alt="foto" class="w-full h-full overflow-hidden object-cover  sm:h-96 "/>
 				<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white">
@@ -21,7 +21,7 @@ function Events() {
             />
 					<div class="space-y-2">
 						<li rel="noopener noreferrer"  class="inline-block text-2xl font-playwrite sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Primeiro Evento Audotei</li>
-							<p class="text-xs dark:text-gray-600" _msttexthash="285766" _msthash="208">por
+							<p class="text-xs " _msttexthash="285766" _msthash="208">por
 						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
 							</p>
 					</div>
@@ -43,11 +43,11 @@ function Events() {
 
 <div class="py-6 bg-custom-color2">
 	<div class="container flex flex-col justify-center p-4 mx-auto">
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
-			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src={fotoEvento2} alt="image1"/>
-			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src={fotoEvento3} alt="image2"/>
-			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src={fotoEvento4} alt="image3"/>
-			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src={fotoEvento5} alt="image4"/>
+		<div class="grid grid-cols-1 gap-3 lg:grid-cols-3 sm:grid-cols-2">
+			<img class="object-cover w-full rounded-full" src={fotoEvento2} alt="image1"/>
+			<img class="object-cover w-full rounded-full" src={fotoEvento3} alt="image2"/>
+			<img class="object-cover w-full rounded-full" src={fotoEvento4} alt="image3"/>
+
 		</div>
 	</div>
 </div>

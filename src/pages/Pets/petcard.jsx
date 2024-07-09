@@ -22,8 +22,8 @@ const PetCard = ({ image, name, idade, description }) => {
     <div className="flex justify-center items-center h-auto ">
 
 
-    <div className="max-w-xs  border-4  border-white  rounded-md mb-2 shadow-md bg-custom-color2  dark:text-gray-900 ">
-      <img src={image} alt={name} className="object-cover cursor-pointer object-center w-full rounded-md h-72 dark:bg-gray-500" onClick={handleImageClick} />
+    <div className="max-w-xs  border-4  border-white  rounded-md mb-2 shadow-md bg-custom-color2   ">
+      <img src={image} alt={name} className="object-cover cursor-pointer object-center w-full rounded-md h-72 " onClick={handleImageClick} />
       <div className="m-2 flex flex-col justify-center items-center">
           <span className="block text-xs text-white  font-medium tracking-widest uppercase">Nome do Pet:</span>
           <h2 className="text-xl p-1 text-white font-semibold tracking-wide">{name}</h2>

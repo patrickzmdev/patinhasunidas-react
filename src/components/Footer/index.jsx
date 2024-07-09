@@ -3,11 +3,11 @@ import "./styles.css";
 
 function Footer() {
   return(
-    <footer class="px-4 py-8 custom-bg-color dark:bg-gray-100 dark:text-gray-600">
+    <footer class="px-4 py-8 custom-bg-color ">
 			<div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
 				<div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
 				<div class="flex items-center justify-center flex-shrink-0 w-24 h-24 rounded-full ">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-32 h-32 rounded-full dark:text-gray-50">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-32 h-32 rounded-full ">
 						<image href={Logo} width="20" height="20" />
         	</svg>
 				</div>

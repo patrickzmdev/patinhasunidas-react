@@ -75,10 +75,10 @@ function HomePage() {
     </div>
     </div>
     <div className="fundo">
-    <div class="p-1 mx-auto sm:p-10 md:p-16 dark:bg-cyan-950 dark:text-gray-800">
+    <div class="p-1 mx-auto sm:p-10 md:p-16 ">
 	  <div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-		<img src={fotoMenu} alt="foto-menu" class="w-full h-auto sm:h-64 object-cover md:h-8 xl:h-auto border-2 border-cyan-950 dark:bg-cyan-950"/>
-		<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 bg-white lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
+		<img src={fotoMenu} alt="foto-menu" class="w-full h-auto sm:h-64 object-cover md:h-8 xl:h-auto border-2 border-cyan-950 "/>
+		<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 bg-white lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md ">
 			<div class="space-y-2 mt-20 bg-white" >
 				<a rel="noopener noreferrer" href="." class="inline-block font-sans text-3xl from-indigo-950 sm:text-3xl" _msttexthash="1638520" _msthash="415">A IMPORTÂNCIA DE ADOTAR UM ANIMAL ABANDONADO</a>
 
@@ -89,7 +89,7 @@ function HomePage() {
 				<p _msttexthash="1006226" _msthash="417" from-neutral-800>&nbsp;&nbsp;&nbsp;&nbsp;De acordo com o Instituto Brasileiro de Geografia e Estatística (IBGE), 44,13% dos lares brasileiros possui ao menos um cão em casa. Isto significa dizer que a população de cachorros nas casas do Brasil chega a 52,2 milhões. Contudo, ainda existem mais de 20 milhões de cães abandonados pelas ruas, nas cidades brasileiras, como mostra a Organização Mundial de Saúde (OMS).</p>
         </div>
       <br/>
-      <div class="dark:text-gray-800 text-1xl font-serif m-2">
+      <div class="text-zinc-950 text-1xl font-serif m-2">
         <p _msttexthash="1006226" _msthash="417" from-neutral-800>&nbsp;&nbsp;&nbsp;&nbsp;Estes animais, abandonados nas ruas, tornam-se alvos de maus-tratos constantes. Muitos acabam ficando doentes pela falta de comida ou morrem devido a atropelamentos. No entanto, a sociedade pode mudar esta realidade e passar a ver a adoção como uma alternativa viável. Para quem ainda tem dúvida sobre este assunto, vamos destacar algumas razões que podem estimular este ato de amor, que é a adoção de animais carentes.</p>
 			</div>
       </div>

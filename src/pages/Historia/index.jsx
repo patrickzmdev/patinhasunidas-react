@@ -17,7 +17,7 @@ function Historia() {
             />
 					<div class="space-y-2">
 						<li rel="noopener noreferrer"  class="inline-block text-2xl font-playwrite sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Nossa História</li>
-							<p class="text-xs dark:text-gray-600" _msttexthash="285766" _msthash="208">por
+							<p class="text-xs " _msttexthash="285766" _msthash="208">por
 						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
 							</p>
 					</div>
