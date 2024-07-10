@@ -64,8 +64,8 @@ function Pets() {
 
   return (
     <>
-    <div className="Pets bg-custom-color">
-    <h1 className="flex flex-col items-center text-white text-2xl font-playwrite sm:text-3xl p-2">Nossos Pets</h1>
+    <div className="Pets bg-custom-color overflow-y-auto max-h-screen">
+    <h1 className="flex flex-col items-center  text-white text-2xl font-playwrite sm:text-3xl p-2">Nossos Pets</h1>
       <PetsList pets = {animais} />
     </div>
 
