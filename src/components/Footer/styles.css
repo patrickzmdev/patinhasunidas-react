@@ -1,3 +1,7 @@
 .custom-bg-color {
   background: linear-gradient(to bottom, #A9070C, #EF3E43);
 }
+
+.bg-color-footer{
+  background:#c67d4e;
+}

@@ -1,9 +1,10 @@
 import Logo from "../../assets/logoNavbar.png";
 import "./styles.css";
+import pzmlogo from "../../assets/cover.png";
 
 function Footer() {
   return(
-    <footer class="px-4 py-8 custom-bg-color ">
+    <footer class="px-0 py-0 custom-bg-color ">
 			<div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
 				<div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
 				<div class="flex items-center justify-center flex-shrink-0 w-24 h-24 rounded-full ">
@@ -35,6 +36,10 @@ function Footer() {
 			</div>
 
 	</div>
+	<div className="w-auto bg-color-footer h-12 flex justify-center items-center">
+		<text className="text-white  font-sans">Desenvolvido por:</text>
+		<img className="w-64 h-12 p-1" src={pzmlogo} alt="logopzm" />
+		</div>
 </footer>
   );
 }
