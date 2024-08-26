@@ -1,6 +1,6 @@
 import Logo from "../../assets/logoNavbar.png";
 import "./styles.css";
-import pzmlogo from "../../assets/cover.png";
+import pzmlogo from "../../assets/logo pzm.jpg";
 
 function Footer() {
   return(
@@ -36,10 +36,14 @@ function Footer() {
 			</div>
 
 	</div>
-	<div className="w-auto bg-color-footer h-12 flex justify-center items-center">
-		<text className="text-white  font-sans">Desenvolvido por:</text>
-		<img className="w-64 h-12 p-1" src={pzmlogo} alt="logopzm" />
-		</div>
+	<div className="w-full bg-color-footer h-9 flex justify-center items-center space-x-2 px-4">
+    <span className="text-black font-playwrite">Desenvolvido por:</span>
+    <img className="h-8" src={pzmlogo} alt="logopzm" />
+</div>
+<div className="w-full bg-color-footer h-8 flex justify-center items-center space-x-1 px-2">
+	<span className="text-black">© 2024 PZM Soluções Digitais</span>
+</div>
+
 </footer>
   );
 }

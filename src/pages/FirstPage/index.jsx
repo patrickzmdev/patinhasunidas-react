@@ -75,12 +75,12 @@ function HomePage() {
     </div>
     </div>
     <div className="fundo">
-    <div class="p-1 mx-auto sm:p-10 md:p-16 ">
+    <div class="p-2 mx-auto sm:p-10 md:p-16 ">
 	  <div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
 		<img src={fotoMenu} alt="foto-menu" class="w-full h-auto sm:h-64 object-cover md:h-8 xl:h-auto border-2 border-cyan-950 "/>
 		<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 bg-white lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md ">
 			<div class="space-y-2 mt-20 bg-white" >
-				<a rel="noopener noreferrer" href="." class="inline-block font-sans text-3xl from-indigo-950 sm:text-3xl" _msttexthash="1638520" _msthash="415">A IMPORTÂNCIA DE ADOTAR UM ANIMAL ABANDONADO</a>
+				<p rel="noopener noreferrer" class="inline-block font-sans text-3xl from-indigo-950 sm:text-2xl" _msttexthash="1638520" _msthash="415">A IMPORTÂNCIA DE ADOTAR UM ANIMAL ABANDONADO</p>
 
 			</div>
       <div className="container-texto h-auto bg-white">

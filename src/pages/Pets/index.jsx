@@ -25,6 +25,7 @@ import urso from "../../assets/Urso, porte G, castrado, vacinado, adulto 6 anos.
 import vovo from "../../assets/Vovo, castrado, vacinado, porte G, 12 anos.jpeg";
 import ozzy from "../../assets/Ozzy, vacinado 1 ano macho.jpg";
 import React, { useState } from 'react';
+import { FaMars, FaVenus } from 'react-icons/fa';
 
 const vacinada = "Vacinada e Castrada";
 const vacinado = "Vacinado e Castrado";
@@ -73,9 +74,9 @@ function Pets() {
     if (showMacho && showFemea) {
       return true; // Mostrar todos se ambos os filtros estiverem ativados
     } else if (showMacho) {
-      return pet.genero === macho; // Mostrar apenas machos
+      return pet.genero === femea; // Mostrar apenas machos
     } else if (showFemea) {
-      return pet.genero === femea; // Mostrar apenas fêmeas
+      return pet.genero === macho; // Mostrar apenas fêmeas
     }else{
       return true; // Não mostrar nenhum se ambos os filtros estiverem desativados
     }
@@ -84,17 +85,17 @@ function Pets() {
 
 
   return (
-    <div className="Pets bg-custom-color overflow-y-auto max-h-screen">
+   <div className="Pets bg-custom-color overflow-y-auto max-h-screen">
       <h1 className="flex flex-col items-center text-white text-2xl font-playwrite sm:text-3xl p-2">Nossos Pets</h1>
       <div className="flex justify-center space-x-4 p-4">
-        <label className="flex items-center">
-          <input type="checkbox" checked={showMacho} onChange={toggleMacho} />
-          <span className="ml-2 text-white">Machos</span>
-        </label>
-        <label className="flex items-center">
-          <input type="checkbox" checked={showFemea} onChange={toggleFemea} />
-          <span className="ml-2 text-white">Fêmeas</span>
-        </label>
+        <h2 className=" text-white text-2xl font-thin sm:text-2xl p-2">Machos</h2>
+        <button className={`text-white px-4 py-2 rounded-md ${showMacho ? 'bg-blue-500' : 'bg-blue-200'}`} onClick={toggleMacho}>
+          <FaMars size={24} />
+        </button>
+        <h2 className="text-white text-2xl font-thin sm:text-2xl p-2">Fêmeas</h2>
+        <button className={`text-white px-4 py-2 rounded-md ${showFemea ? 'bg-pink-500' : 'bg-pink-200'}`} onClick={toggleFemea}>
+          <FaVenus size={24} />
+        </button>
       </div>
       <PetsList pets={filteredPets} />
     </div>
