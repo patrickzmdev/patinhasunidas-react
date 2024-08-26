@@ -1,5 +1,7 @@
 import "../Events/styles.css";
 import { useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const PetCard = ({ image, name, idade, description }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,7 +25,7 @@ const PetCard = ({ image, name, idade, description }) => {
 
 
     <div className="max-w-xs  border-4  border-white  rounded-md mb-2 shadow-md bg-custom-color2   ">
-      <img src={image} alt={name} className="object-cover cursor-pointer object-center w-full rounded-md h-72 " onClick={handleImageClick} />
+      <LazyLoadImage src={image} alt={name} effect="blur" className="object-cover cursor-pointer object-center w-full rounded-md h-72 " onClick={handleImageClick} />
       <div className="m-2 flex flex-col justify-center items-center">
           <span className="block text-xs text-white  font-medium tracking-widest uppercase">Nome do Pet:</span>
           <h2 className="text-xl p-1 text-white font-semibold tracking-wide">{name}</h2>
