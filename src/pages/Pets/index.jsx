@@ -8,7 +8,6 @@ import guria from "../../assets/Guria, 12 anos, resgatada do Rio grande do sul
 import homenzinho from "../../assets/homenzinho 4 anos macho castrado vacinado.jpg";
 import horacio from "../../assets/horacio 4 anos macho castrado vacinado.jpg";
 import jack from "../../assets/jack vacinado castrado macho 3 anos.jpg";
-import julie from "../../assets/julie 3 anos castrada vacinada femea.jpg";
 import laikito from "../../assets/Laikito, 2 ano, vacinado, castrado, macho.jpg";
 import lua from "../../assets/Lua, 4 anos, fêmea, vacinada, castrada.jpg";
 import maezinha from "../../assets/maezinha 4 anos vacinada castrada femea.jpg";
@@ -114,14 +113,6 @@ const animais = [
     genero: macho,
   },
   {
-    id: 11,
-    name: "Julie",
-    image: julie,
-    idade: "3 anos",
-    description: vacinada,
-    genero: femea,
-  },
-  {
     id: 12,
     name: "Laikito",
     image: laikito,
@@ -202,27 +193,11 @@ const animais = [
     genero: femea,
   },
   {
-    id: 23,
-    name: "Thor",
-    image: thor,
-    idade: "10 anos",
-    description: vacinado,
-    genero: macho,
-  },
-  {
     id: 24,
     name: "Urso",
     image: urso,
     idade: "6 anos",
     description: vacinado,
-    genero: macho,
-  },
-  {
-    id: 25,
-    name: "Vovô",
-    image: vovo,
-    idade: "12 anos",
-    description: "Porte G, Vacinado e Castrado",
     genero: macho,
   },
 ];

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Heart, PawPrint } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 // Assume these images are imported correctly
 import foto2 from "../../assets/fotomenu2.jpg";
 import foto3 from "../../assets/fotomenu4.png";
 import fotoMenu from "../../assets/imgtextcontainer.jpg";
 
-const ModernHomePage = () => {
+function HomePage () {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [foto2, foto3];
 
@@ -34,9 +35,8 @@ const ModernHomePage = () => {
             key={index}
             src={slide}
             alt={`Slide ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-              activeSlide === index ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${activeSlide === index ? "opacity-100" : "opacity-0"
+              }`}
             initial={{ scale: 1.1 }}
             animate={{ scale: activeSlide === index ? 1 : 1.1 }}
             transition={{ duration: 5 }}
@@ -98,14 +98,18 @@ const ModernHomePage = () => {
               </p>
             </div>
 
-            <motion.a
-              href="/pets"
-              className="inline-block bg-red-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-red-600 transition-colors"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="inline-block"
             >
-              Adote Agora
-            </motion.a>
+              <Link
+                to="/pets"
+                className="bg-red-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-red-600 transition-colors"
+              >
+                Adote Agora
+              </Link>
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -113,4 +117,4 @@ const ModernHomePage = () => {
   );
 };
 
-export default ModernHomePage;
+export default HomePage;
