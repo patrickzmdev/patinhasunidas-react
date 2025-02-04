@@ -1,11 +1,3 @@
-.bg-custom-color{
-  background: linear-gradient(to bottom, #EF3E43, #FD6468);
-}
-
-.bg-custom-color2{
-  background: linear-gradient(to bottom,#FD6468, #A9070C );
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;

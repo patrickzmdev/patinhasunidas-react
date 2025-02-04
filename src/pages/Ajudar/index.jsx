@@ -1,164 +1,154 @@
 import caotriste from "../../assets/cao-abandonado.jpg";
-import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
 import qrcode from "../../assets/qr-code.jpg";
-import "../Events/styles.css";
-import {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
+import { Heart, Copy, X } from "lucide-react";
+import { motion } from "framer-motion";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function Ajudar () {
+const Ajudar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const textoParaCopiarRef = useRef(null);
 
-  const handleButtonClick = () => {
-    setIsVisible(!isVisible);
-  };
-
-  const handleCloseModal = () => {
-    setIsVisible(false);
-  };
-
   const handleCopy = async () => {
-    const textoParaCopiar = document.getElementById('textoParaCopiar');
     try {
-      await navigator.clipboard.writeText(textoParaCopiar.value);
-      alert('Linha copiada com sucesso, acesse o App do seu Banco para concluir o pix.');
+      await navigator.clipboard.writeText(textoParaCopiarRef.current.value);
+      toast.success(
+        "Linha copiada com sucesso, acesse o App do seu Banco para concluir o pix."
+      );
     } catch (err) {
-      console.error('Erro ao copiar texto: ', err);
+      toast.error("Erro ao copiar texto.");
+      console.error("Erro ao copiar texto: ", err);
     }
   };
 
   return (
-    <>
-      <div className="p-1 mx-auto sm:p-4 bg-custom-color2 md:p-1">
-        <div className="flex flex-col items-center justify-center max-w-xs mx-auto bg-custom-color1 space-y-4 p-4">
-          <button
-            type="button"
-            className="w-full px-8 py-3 font-semibold bg-custom-color2 rounded-full text-white"
-            onClick={handleButtonClick}
-          >
-            Clique aqui se você deseja nos ajudar
-          </button>
-
-          {isVisible && (
-            <div className="modal-overlay" onClick={handleCloseModal}>
-              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <li className="inline-block text-2xl font-semibold text-black sm:text-3xl m-8">
-                  Pix-QRCODE
-                </li>
-
-                <img
-                  src={qrcode}
-                  alt="qrcode"
-                  className="object-cover object-center max-w-full rounded-md h-auto"
-                />
-
-                <li className="inline-block text-2xl font-semibold text-black sm:text-3xl m-8">
-                  Linha Digitável
-                </li>
-
-                <textarea
-                  ref={textoParaCopiarRef}
-                  className="w-full h-32 p-2 border rounded-lg resize-none"
-                  rows="3"
-                  cols="50"
-                  id="textoParaCopiar"
-                >
-                  00020101021126360014br.gov.bcb.pix0114476477850001525204000053039865802BR5925INSTITUTO PATINHAS UNIDAS6008BRASILIA62070503***63046951
-                </textarea>
-
-                <button
-                  id="copyButton"
-                  className="w-full px-8 py-3 font-semibold bg-custom-color rounded-full text-white"
-                  onClick={handleCopy}
-                >
-                  Copiar Linha Digitável
-                </button>
-
-                <button
-                  className="w-full px-8 py-3 mt-4 font-semibold bg-gray-600 rounded-full text-white"
-                  onClick={handleCloseModal}
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="p-1 mx-auto bg-custom-color2 sm:p-10 md:p-16">
-        <div className="flex flex-col items-center max-w-3xl mx-auto overflow-hidden rounded">
-          <img
-            src={caotriste}
-            alt="foto-menu"
-            className="w-full h-auto sm:h-64 object-cover md:h-72 xl:h-auto border-2 border-cyan-950"
-          />
-
-          <div className="p-8 pb-1 m-8 mx-auto bg-white mt-10 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
-            <div className="space-y-2">
-              <li className="inline-block text-2xl font-playwrite sm:text-3xl m-4">
+    <div className="bg-gradient-to-br from-red-50 to-white h-max">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="px-6 md:px-12 pb-12">
+            <div className="text-center mb-10">
+              <h1 className="text-4xl font-extrabold text-red-600 flex items-center justify-center">
+                <Heart className="mr-4 text-red-400" />
                 Apadrinhamento de Pets
-              </li>
+              </h1>
+              <p className="text-gray-500 mt-2">
+                Ajude-nos a continuar nosso trabalho
+              </p>
             </div>
 
-            <div className="container-texto overflow-y-auto object-cover max-h-full md:max-h-full">
+            <motion.div
+              className="mb-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
               <img
-                src={fotoContainer}
-                alt="foto-container"
-                className="img-container object-cover"
+                src={caotriste}
+                alt="Cão abandonado"
+                className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
+            </motion.div>
 
-              <div className="text-zinc-950 text-1xl font-serif m-2">
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              <motion.div
+                className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h3 className="font-bold text-xl text-red-600 mb-4">
+                  Como funciona o apadrinhamento?
+                </h3>
                 <p>
-                  Para quem ama pets, mas não pode ter um em casa devido à falta de espaço e tempo, nosso grupo disponibiliza a opção de apadrinhamento.
+                  Com um pequeno valor mensal, você pode ser dinda ou dindo de
+                  um doguinho que ainda não encontrou uma família. Esse valor
+                  estabelecido por você é a nossa principal fonte de recurso e
+                  nos ajuda a garantir a alimentação, medicamentos e a
+                  hospedagem que eles ficam.
                 </p>
-                <br />
-                <p>Como isso funciona?</p>
-                <br />
-                <p>
-                  Com um pequeno valor mensal, você pode ser dinda ou dindo de um doguinho que ainda não encontrou uma família. Esse valor estabelecido por você é a nossa principal fonte de recurso e nos ajuda a garantir a alimentação, medicamentos e a hospedagem que eles ficam.
-                </p>
-                <br />
-                <p>
-                  Para quem já teve ou tem um doguinho sabe que há custos, agora imagina nós do Instituto Patinhas Unidas SC com mais de 25 cães sob nossa responsabilidade e sem nenhum recurso fixo?
-                </p>
-                <br />
-                <p>
-                  Por isso que o apadrinhamento é a parte essencial para continuarmos nosso trabalho, sabendo o valor que podemos contar por mês fica mais fácil nos planejarmos para futuros resgates.
-                </p>
-                <br />
-                <p>
-                  Com esse gesto de amor e solidariedade você fortalece nosso trabalho e acolhe um anjinho desamparado até encontrarem uma família disposta a adotar e cuidar com todo amor que eles merecem.
-                </p>
+              </motion.div>
 
-                <li className="inline-block text-2xl font-semibold sm:text-3xl m-9">
-                  Para maiores detalhes, acesse nosso Instagram, clicando no botão abaixo:
-                </li>
+              <p>
+                Para quem já teve ou tem um doguinho sabe que há custos, agora
+                imagina nós do Instituto Patinhas Unidas SC com mais de 25 cães
+                sob nossa responsabilidade e sem nenhum recurso fixo?
+              </p>
+
+              <div className="flex flex-col items-center space-y-4 mt-8">
+                <motion.button
+                  className="bg-red-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-red-600 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsVisible(true)}
+                >
+                  Quero Ajudar
+                </motion.button>
+
+                {isVisible && (
+                  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                    <motion.div
+                      className="bg-white rounded-2xl p-6 max-w-md w-full"
+                      initial={{ scale: 0.9, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                    >
+                      <div className="flex justify-between items-center mb-4">
+                        <h2 className="text-2xl font-bold text-red-600">
+                          PIX QR Code
+                        </h2>
+                        <button
+                          onClick={() => setIsVisible(false)}
+                          className="p-2 hover:bg-gray-100 rounded-full"
+                        >
+                          <X className="w-6 h-6" />
+                        </button>
+                      </div>
+
+                      <img
+                        src={qrcode}
+                        alt="QR Code PIX"
+                        className="w-full h-auto mb-4 rounded-lg"
+                      />
+
+                      <div className="relative">
+                        <textarea
+                          ref={textoParaCopiarRef}
+                          className="w-full p-2 border rounded-lg text-sm bg-gray-50"
+                          readOnly
+                          rows={4}
+                          value="00020101021126360014br.gov.bcb.pix0114476477850001525204000053039865802BR5925INSTITUTO PATINHAS UNIDAS6008BRASILIA62070503***63046951"
+                        />
+                        <button
+                          onClick={handleCopy}
+                          className="absolute right-2 top-2 p-0 hover:bg-gray-200 rounded-full"
+                        >
+                          <Copy className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </motion.div>
+                  </div>
+                )}
 
                 <a
                   href="https://www.instagram.com/institutopatinhasunidassc/"
                   target="_blank"
-                  title="Instagram"
-                  className="flex items-center p-4 m-2 justify-center bg-custom-color rounded-md"
                   rel="noreferrer"
+                  className="text-red-500 hover:text-red-600 font-medium"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    fill="currentColor"
-                    className="w-5 text-white h-5 m-1 fill-current"
-                  >
-                    <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.781 1.849-2.833 0.396-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.709-0.349-2.865-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.781-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.020 6.469 0.088 1.563 0.072 2.409 0.333 2.971 0.553 0.751 0.292 1.281 0.641 1.844 1.197 0.552 0.552 0.901 1.084 1.197 1.844 0.219 0.563 0.48 1.411 0.552 2.971 0.068 1.688 0.088 2.199 0.088 6.469s-0.020 4.781-0.088 6.469c-0.072 1.563-0.333 2.409-0.552 2.971-0.292 0.751-0.641 1.281-1.197 1.844-0.563 0.552-1.084 0.901-1.844 1.197-0.563 0.219-1.411 0.48-2.971 0.552-1.688 0.068-2.199 0.088-6.469 0.088s-4.781-0.020-6.469-0.088c-1.563-0.072-2.409-0.333-2.971-0.552-0.751-0.292-1.281-0.641-1.844-1.197-0.552-0.563-0.901-1.084-1.197-1.844-0.219-0.563-0.48-1.411-0.553-2.971-0.068-1.688-0.088-2.199-0.088-6.469s0.020-4.781 0.088-6.469c0.072-1.563 0.333-2.409 0.553-2.971 0.292-0.751 0.641-1.281 1.197-1.844 0.563-0.563 1.084-0.901 1.844-1.197 0.563-0.219 1.411-0.48 2.971-0.552 1.688-0.068 2.199-0.088 6.469-0.088zM16 7.776c-4.553 0-8.224 3.671-8.224 8.224s3.671 8.224 8.224 8.224 8.224-3.671 8.224-8.224-3.671-8.224-8.224-8.224zM16 9.929c3.349 0 6.071 2.723 6.071 6.071s-2.723 6.071-6.071 6.071-6.071-2.723-6.071-6.071 2.723-6.071 6.071-6.071zM23.125 7.443c-1.063 0-1.927 0.865-1.927 1.927s0.865 1.927 1.927 1.927 1.927-0.865 1.927-1.927-0.865-1.927-1.927-1.927z"></path>
-                  </svg>
-
-                  <span className="text-white">Instagram</span>
+                  Siga-nos no Instagram
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </>
+      <ToastContainer />
+    </div>
   );
-}
+};
 
 export default Ajudar;

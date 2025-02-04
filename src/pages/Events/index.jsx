@@ -2,58 +2,154 @@ import fotoEvento from "../../assets/evento1.jpg";
 import fotoEvento2 from "../../assets/evento2.jpg";
 import fotoEvento3 from "../../assets/evento3.jpg";
 import fotoEvento4 from "../../assets/evento4.jpg";
-import fotoEvento5 from "../../assets/evento5.jpg";
 import "./styles.css";
-import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
+
+import React, { useState } from "react";
+import { Calendar, Image, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Events() {
-  return(
-    <>
-    <div class="p-5 mx-auto sm:p-10 md:p-16 bg-custom-color ">
-			<div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-			<img src={fotoEvento} alt="foto" class="w-full h-full overflow-hidden object-cover  sm:h-96 "/>
-				<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white">
-					<div className="container-texto overflow-y-auto h-full md:max-h-full">
-            <img
-              src={fotoContainer}
-              alt="foto-container"
-              className="img-container h-full w-full"
-            />
-					<div class="space-y-2">
-						<li rel="noopener noreferrer"  class="inline-block text-2xl font-playwrite sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Primeiro Evento Audotei</li>
-							<p class="text-xs " _msttexthash="285766" _msthash="208">por
-						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
-							</p>
-					</div>
-					<div class="text-zinc-950 text-1xl font-serif m-2">
-							<p _msttexthash="1006226" _msthash="209">O primeiro Audotei do Instituto Patinhas Unidas SC, realizado em fevereiro de 2024, foi um momento de grande celebração para a comunidade canina. Contamos com a presença de mais de 40 cães e seus tutores no local, com ajuda de voluntários também foi possível realizar uma feirinha de adoção, onde os cães resgatados procuravam por novos lares.</p>
-							<br/>
-							<p _msttexthash="1006226" _msthash="209">Durante o evento, foram distribuídos petiscos, brindes e picolés pet para que os cães e, ao mesmo tempo, arrecadamos recursos para a causa animal. Além disso, foi realizada uma arrecadação de rações para os cães desamparados, bem como um bazar solidário que ofereceu opções para os participantes.</p>
-							<br/>
-							<p _msttexthash="1006226" _msthash="209">O evento também contou com a presença de experientes adestrador e veterinárias que ministraram palestras e expuseram seus conhecimentos para os interessados. Foi um dia recheado de emoção e esperança, pois pudemos rever vários cães que receberam o amor e a proteção do Instituto Patinhas Unidas SC, inclusive de cidades distantes.</p>
-							<br/>
-							<p _msttexthash="1006226" _msthash="209">Esse evento foi um sucesso absoluto, demonstrando que a união pode fazer uma grande diferença na vida dos nossos amigos caninos.</p>
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const images = [
+    { src: fotoEvento2, alt: "Evento 2" },
+    { src: fotoEvento3, alt: "Evento 3" },
+    { src: fotoEvento4, alt: "Evento 4" },
+  ];
 
-					</div>
-					</div>
-			</div>
-		</div>
-	 </div>
+  const allImages = [{ src: fotoEvento, alt: "Evento Principal" }, ...images];
 
-<div class="py-6 bg-custom-color2">
-	<div class="container flex flex-col justify-center p-4 mx-auto">
-		<div class="grid grid-cols-1 gap-3 lg:grid-cols-3 sm:grid-cols-2">
-			<img class="object-cover w-full rounded-full" src={fotoEvento2} alt="image1"/>
-			<img class="object-cover w-full rounded-full" src={fotoEvento3} alt="image2"/>
-			<img class="object-cover w-full rounded-full" src={fotoEvento4} alt="image3"/>
+  return (
+    <div className="bg-gradient-to-br from-red-50 to-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="px-6 md:px-12 pb-12">
+            <div className="text-center mb-10">
+              <h1 className="text-4xl font-extrabold text-red-600 flex items-center justify-center">
+                <Calendar className="mr-4 text-red-400" />
+                Primeiro Evento Audotei
+              </h1>
+              <p className="text-gray-500 mt-2">
+                por <span className="font-semibold">Patinhas Unidas</span>
+              </p>
+            </div>
 
-		</div>
-	</div>
-</div>
+            <motion.div
+              className="mb-8 aspect-w-16 aspect-h-9 rounded-xl overflow-hidden cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              onClick={() => setSelectedImage(allImages[0])}
+            >
+              <img
+                src={fotoEvento}
+                alt="Evento Principal"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
 
-</>
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              <p>
+                O primeiro Audotei do Instituto Patinhas Unidas SC, realizado em
+                fevereiro de 2024, foi um momento de grande celebração para a
+                comunidade canina. Contamos com a presença de mais de 40 cães e
+                seus tutores no local, com ajuda de voluntários também foi
+                possível realizar uma feirinha de adoção, onde os cães
+                resgatados procuravam por novos lares.
+              </p>
 
+              <motion.div
+                className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center">
+                  <Image className="mr-4 text-red-500 w-12 h-12" />
+                  <div>
+                    <h3 className="font-bold text-xl text-red-600">
+                      Destaques do Evento
+                    </h3>
+                    <ul className="list-disc list-inside text-base mt-2">
+                      <li>Distribuição de petiscos e brindes</li>
+                      <li>Arrecadação de rações</li>
+                      <li>Bazar solidário</li>
+                      <li>Palestras com especialistas</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              <p>
+                Durante o evento, foram distribuídos petiscos, brindes e picolés
+                pet para que os cães e, ao mesmo tempo, arrecadamos recursos
+                para a causa animal. Além disso, foi realizada uma arrecadação
+                de rações para os cães desamparados, bem como um bazar solidário
+                que ofereceu opções para os participantes.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {images.map((img, idx) => (
+                  <motion.div
+                    key={idx}
+                    className="relative aspect-w-4 aspect-h-3 rounded-xl overflow-hidden cursor-pointer"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => setSelectedImage(img)}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <motion.button
+                className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition-colors z-10"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setSelectedImage(null)}
+              >
+                <X className="w-6 h-6" />
+              </motion.button>
+              <div className="h-full">
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 

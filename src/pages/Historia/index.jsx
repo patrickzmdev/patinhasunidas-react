@@ -1,64 +1,137 @@
-import "../Events/styles.css";
-import fotoContainer from "../../assets/papel-de-parede-patinhas.jpg";
+import React from "react";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { Heart, Users, Trophy } from "lucide-react";
+import "./styles.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import fotoLogo from "../../assets/logoNavbar.png";
+import foto1 from "../../assets/tuane.jpg";
+import foto2 from "../../assets/eve.jpg";
+import foto3 from "../../assets/kely.jpg";
+import foto4 from "../../assets/amanda.jpg";
 
-function Historia() {
-  return(
-    <>
-    <div class="p-4 mx-auto sm:p-10 md:p-16 bg-custom-color2 ">
-			<div class="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-			<img src={fotoLogo} alt="foto" class="w-auto h-auto "/>
-				<div class="p-6 pb-12 m-4 mx-auto mt-10 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white">
-					<div className="container-texto overflow-y-auto h-full md:max-h-full">
-            <img
-              src={fotoContainer}
-              alt="foto-container"
-              className="img-container h-full w-full overflow-hidden"
+const Historia = () => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerPadding: "0px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-red-50 to-white h-max">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Logo Section */}
+          <div className="py-8 text-center">
+            <motion.img
+              src={fotoLogo}
+              alt="Logo Patinhas Unidas"
+              className="mx-auto max-h-32 object-contain"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
             />
-					<div class="space-y-2">
-						<li rel="noopener noreferrer"  class="inline-block text-2xl font-playwrite sm:text-3xl m-9" _msttexthash="1638520" _msthash="207">Nossa História</li>
-							<p class="text-xs " _msttexthash="285766" _msthash="208">por
-						<a rel="noopener noreferrer" href="." class="text-xs hover:underline" _istranslated="1">Patinhas Unidas</a>
-							</p>
-					</div>
-					<div class="text-zinc-950 text-1xl font-serif m-2">
-							<p _msttexthash="1006226" _msthash="209"> &nbsp;&nbsp;&nbsp;&nbsp;
-                Ao longo dos 5 anos do Instituto
-                Patinhas Unidas SC, já foi possível resgatar e acolher mais de
-                duzentos de animais, tratando-os de suas feridas físicas e
-                psicológicas, com o apoio de toda uma equipe técnica: com médica
-                veterinária, adestrador e voluntários, que se doam intensamente
-                em prol da causa animal, reabilitando estes animais e dando-lhes
-                condições de serem adotados novamente por famílias criteriosamente
-                escolhidas e monitoradas pelo instituto, garantindo que estes
-                animais não retornem às ruas novamente.</p>
-							<br/>
-							<p _msttexthash="1006226" _msthash="209">&nbsp;&nbsp;&nbsp;&nbsp;Somos
-                um instituto sem fins lucrativos, e
-                além de nosso trabalho voluntário, mantemos tudo através de
-                doações. Frequentemente realizamos eventos como bazares solidários
-                ou rifas para angariar fundos a fim de continuarmos desenvolvendo
-                este trabalho, dando a chance de um lar para inúmeros animais em
-                condições de abandono, expostos ao frio, fome, sede e a maldade
-                humana nas ruas.</p>
-							<br/>
-							<p _msttexthash="1006226" _msthash="209">&nbsp;&nbsp;&nbsp;&nbsp;
-                Somente no ano de 2023 foram realizadas,
-                por meio do Instituto 44 adoções, 42 animais resgatados, 119
-                vacinas aplicadas e 53 castrações.</p>
-							<br/>
+          </div>
 
+          {/* History Content */}
+          <div className="px-6 md:px-12 pb-12">
+            <div className="text-center mb-10">
+              <h1 className="text-4xl font-extrabold text-red-600 flex items-center justify-center">
+                <Heart className="mr-4 text-red-400" />
+                Nossa História
+              </h1>
+              <p className="text-gray-500 mt-2">
+                por <span className="font-semibold">Patinhas Unidas</span>
+              </p>
+            </div>
 
-					</div>
-					</div>
-			</div>
-		</div>
-	 </div>
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+              {/* Achievements Highlight */}
+              <motion.div
+                className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500 flex items-center"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Trophy className="mr-4 text-red-500 w-12 h-12" />
+                <div>
+                  <h3 className="font-bold text-xl text-red-600">
+                    Conquistas em 2023
+                  </h3>
+                  <ul className="list-disc list-inside text-base">
+                    <li>44 Adoções</li>
+                    <li>42 Animais Resgatados</li>
+                    <li>119 Vacinas Aplicadas</li>
+                    <li>53 Castrações</li>
+                  </ul>
+                </div>
+              </motion.div>
 
+              {/* Story Paragraphs */}
+              <p>
+                Ao longo dos 5 anos do Instituto Patinhas Unidas SC, já foi
+                possível resgatar e acolher mais de duzentos animais,
+                tratando-os de suas feridas físicas e psicológicas. Contamos com
+                uma equipe técnica dedicada: médica veterinária, adestrador e
+                voluntários que se doam intensamente em prol da causa animal.
+              </p>
 
-</>
+              <p>
+                Somos um instituto sem fins lucrativos, mantido através de
+                doações. Realizamos eventos como bazares solidários e rifas para
+                angariar fundos e continuar nosso trabalho de dar um lar a
+                animais abandonados, protegendo-os do frio, fome e maldade.
+              </p>
+            </div>
 
+            <div className="bg-gray-50 py-12">
+              <h2 className="text-4xl font-extrabold text-red-600 flex items-center justify-center">
+                <Users className="mr-4 text-red-400" />
+                Nossos Colaboradores
+              </h2>
+
+              <Slider {...settings}>
+                {[foto1, foto2, foto3, foto4].map((img, idx) => (
+                  <div key={idx} className="px-2 outline-none">
+                    <img
+                      src={img}
+                      alt={`Colaborador ${idx + 1}`}
+                      className="w-full h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Historia;
